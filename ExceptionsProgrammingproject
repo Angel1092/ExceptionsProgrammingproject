@@ -1,0 +1,41 @@
+// Angel Guerra (angel.guerra@malad.us)
+// For CTE Software Development 1
+// Instructor: Mr. Gross
+
+public class ExceptionProject {
+    public static void main(String[] args) {
+
+        // This section intentionally will cause an array out-of-bounds exception
+        int[] numbers = { 5, 10, 15 };
+
+        try {
+            System.out.println("Trying to access index 5: " + numbers[5]);
+        } 
+        catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("ERROR: Array index out of bounds.");
+            System.out.println("Explanation: You tried to access a position in the array that doesn’t exist.");
+        }
+
+        System.out.println("The program continued after handling the array error.\n");
+
+        // This section will intentionally cause a divide-by-zero exception
+        try {
+            int x = 20;
+            int y = 0;
+
+            int result = x / y; // this causes the error
+            System.out.println("Result: " + result);
+        } 
+        catch (ArithmeticException e) {
+            System.out.println("ERROR: Cannot divide by zero.");
+            System.out.println("Explanation: Division by zero is not allowed in math or in Java.");
+        }
+
+        System.out.println("The program continued after handling the divide-by-zero error.\n");
+
+        // Final message
+        System.out.println("Both exceptions were caught successfully.");
+        System.out.println("Program closed without crashing.");
+    }
+}
+# ExceptionsProgrammingproject
